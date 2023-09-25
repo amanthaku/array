@@ -1,0 +1,63 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections;
+namespace collection
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //int[] array = new int[3];
+            //array[0] = 1;
+            //array[1] = 2;
+            //array[2] = 3;
+            //Console.WriteLine(array[0]);
+            //foreach (int i in array) Console.WriteLine(i);
+            
+            ArrayList array = new ArrayList(5);
+            array.Add(1);
+            array.Add(2);
+            array.Add(3);
+            array.Add(4);
+            array.Add(5);
+  
+
+            // array.Remove(3);
+            // array.Remove(6); // index value not present but here no exception erroe come
+            //foreach (int i in array)
+            //{
+            //    Console.WriteLine(i);
+            //}
+            //Console.WriteLine();
+            //Console.WriteLine("after remove");
+            //array.RemoveAt(4);
+            //foreach (int i in array)
+            //{
+            //    Console.WriteLine(i);
+            //}
+            //array.Insert(3, 10);
+            //Console.WriteLine();
+            //foreach (int i in array)
+            //{
+            //    Console.WriteLine(i + " ");
+            //}
+            // Console.WriteLine(array.Capacity);
+            //array.Add(11);
+            //array.Add(21);
+            //Console.WriteLine(array.Capacity);
+            //array.Add(11);
+            //array.Add(21);
+            //Console.WriteLine(array.Capacity);
+            //array.Add(11);
+            //array.Add(21);
+            //Console.WriteLine(array.Capacity);
+
+
+
+            Console.ReadLine();
+        }
+    }
+}
