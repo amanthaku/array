@@ -1,0 +1,36 @@
+ Bootstrap Required Home controller
+public ActionResult Create(EmployeeModelcs obj)
+ {
+     return View();
+ }
+
+View 
+<!---database copy the table into EmployeeModelcs Model-->
+@model WebApplicationReal.Models.EmployeeModelcs
+
+@using (Html.BeginForm("ReadModel", "Home", FormMethod.Post))
+{
+    <div>
+        <label>Name</label>
+        @Html.TextBoxFor(m => m.name, new { @class = "form-control", @placeholder = "Name", @Required = "required" })
+    </div>
+
+    <div>
+        <label>Email</label>
+        @Html.TextBoxFor(m => m.name, new { @class = "form-control", @placeholder = "Email" })
+    </div>
+    <div>
+        <label>Phone</label>
+        @Html.TextBoxFor(m => m.phone, new { @class = "form-control", @placeholder = "Phone" })
+    </div>
+    <div>
+        <label>City</label>
+        @Html.TextBoxFor(m => m.city, new { @class = "form-control", @placeholder = "City" })
+    </div>
+    <div>
+        <label>Zipcode</label>
+        @Html.TextBoxFor(m => m.zipcode, new { @class = "form-control", @placeholder = "Zipcode", @Required = "required" })
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+}
