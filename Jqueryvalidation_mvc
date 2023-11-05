@@ -1,0 +1,48 @@
+<!--First include jquery in layout page>
+ @Scripts.Render("~/bundles/jqueryval")
+
+controller
+ public ActionResult Create(EmployeeModelcs obj)
+ {
+     return View();
+ }
+
+view 
+
+@model WebApplicationReal.Models.EmployeeModelcs
+<style>
+    .error{
+        color:red;
+    }
+</style>
+@using (Html.BeginForm("ReadModel", "Home", FormMethod.Post))
+{
+    <div>
+        <label>Name</label>
+        @Html.TextBoxFor(m => m.name, new { @class = "form-control", @placeholder = "Name", data_rule_required="true" })
+        @Html.ValidationMessageFor(m=>m.name,"",new {@class="error"})
+    </div>
+
+    <div>
+        <label>Email</label>
+        @Html.TextBoxFor(m => m.email, new { @class = "form-control", @placeholder = "Email", data_rule_required = "true" })
+        @Html.ValidationMessageFor(m => m.email, "", new { @class = "error" })
+    </div>
+    <div>
+        <label>Phone</label>
+        @Html.TextBoxFor(m => m.phone, new { @class = "form-control", @placeholder = "Phone", data_rule_required = "true" })
+        @Html.ValidationMessageFor(m => m.phone, "", new { @class = "error" })
+    </div>
+    <div>
+        <label>City</label>
+        @Html.TextBoxFor(m => m.city, new { @class = "form-control", @placeholder = "City", data_rule_required = "true" })
+        @Html.ValidationMessageFor(m => m.city, "", new { @class = "error" })
+    </div>
+    <div>
+        <label>Zipcode</label>
+        @Html.TextBoxFor(m => m.zipcode, new { @class = "form-control", @placeholder = "Zipcode" })
+        @Html.ValidationMessageFor(m => m.zipcode, "", new { @class = "error" })
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+}
